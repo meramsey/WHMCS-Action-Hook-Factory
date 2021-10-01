@@ -4,7 +4,7 @@
 // https://developers.whmcs.com/api-reference/updateclientdomain/
 
 /**
- * Automatically Enable Domain Prior to Registering domain
+ * Automatically Enable Domain Privacy Protection Prior to Registering domain
  *
  * @package     WHMCS
  * @copyright   meramsey
@@ -30,9 +30,9 @@ function enable_domain_privacy($vars) {
 		'idprotection' => true,
 	);
 	
-  $adminUsername = ''; // Optional for WHMCS 7.2 and later
+  	$adminUsername = ''; // Optional for WHMCS 7.2 and later
 	$results = localAPI($command, $postData, $adminUsername);
-  $info = "For domainid: $domain_id" ;
+  	$info = "For domainid: $domain_id" ;
 	if ($results['result'] == 'success') {
 		$msg = 'Domain id protection set successfully! ' . $info;
 	} else {
